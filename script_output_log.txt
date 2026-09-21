@@ -1,0 +1,35 @@
+penguins$island 
+          Frequency Percent
+Biscoe          168   48.84
+Dream           124   36.05
+Torgersen        52   15.12
+Total           344  100.00
+penguins$sex 
+       Frequency Percent Valid Percent
+female       165  47.965         49.55
+male         168  48.837         50.45
+NA's          11   3.198              
+Total        344 100.000        100.00
+
+Call:
+lm(formula = body_mass_g ~ bill_length_mm + flipper_length_mm + 
+    bill_depth_mm, data = penguins)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1054.94  -290.33   -21.91   239.04  1276.64 
+
+Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       -6424.765    561.469 -11.443   <2e-16 ***
+bill_length_mm        4.162      5.329   0.781    0.435    
+flipper_length_mm    50.269      2.477  20.293   <2e-16 ***
+bill_depth_mm        20.050     13.694   1.464    0.144    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 393.4 on 338 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.7615,	Adjusted R-squared:  0.7594 
+F-statistic: 359.7 on 3 and 338 DF,  p-value: < 2.2e-16
+
