@@ -18,3 +18,11 @@ ggplot(data=penguins)+geom_point(aes(x=flipper_length_mm, y=body_mass_g))+geom_s
 # NEXT 2 LINES FROM AI -- Place this at the very bottom to cleanly close the log
 sink(type = "output")
 sink(type = "message")
+
+#Contribution-EM
+penguins <- read.csv("penguins.csv")
+
+aggregate(flipper_length_mm ~ species,
+          data = penguins, FUN = mean)
+
+
